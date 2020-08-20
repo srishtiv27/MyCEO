@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "981156313082",
+    "firebase_url": "https://myceo-50967.firebaseio.com",
+    "project_id": "myceo-50967",
+    "storage_bucket": "myceo-50967.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:981156313082:android:dbcfc8ae84b4c143c85643",
+        "android_client_info": {
+          "package_name": "co.srishti.my_ceo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "981156313082-0fpkgdfanlegk7mngoj987gej8t182a7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6yXF4u07kzQyn57wN8IXOl0iC3kY2_tA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "981156313082-0fpkgdfanlegk7mngoj987gej8t182a7.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "981156313082-a8o6gdcdesaljdgjqqd8633c34h1j8k5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "co.srishtiv.myCeo"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,10 @@
+const String kelonMuskBio =
+    'Elon Musk is a South African-born American entrepreneur and businessman who founded X.com in 1999 (which later became PayPal), SpaceX in 2002 and Tesla Motors in 2003. Musk became a multimillionaire in his late 20s when he sold his start-up company, Zip2, to a division of Compaq Computers.';
+const String kcorrieBarryBio =
+    'After spending two decades at Best Buy, working her way up through the finance department, Barry was promoted from CFO to the top job in June, replacing Hubert Joly—who is credited with saving the big-box electronics retailer.Barry oversaw strategic transformation and growth before becoming CEO, laying the groundwork for the turnaround that propelled her up the executive ranks. Her age makes her one of the youngest Fortune 500 CEOs.';
+const String kmaryBarraBio =
+    'Mary Teresa Barra (née Makela; born December 24, 1961) is an American businesswoman who has been the chairman and CEO of General Motors Company since January 15, 2014. She is the first female CEO of a major automaker. Under Barra’s leadership, GM envisions a world with zero crashes, to save lives; zero emissions, so future generations can inherit a healthier planet; and zero congestion, so customers get back a precious commodity – time.';
+const String ksatyaNadellaBio =
+    'Satya Nadella is Chief Executive Officer of Microsoft. Before being named CEO in February 2014, Nadella held leadership roles in both enterprise and consumer businesses across the company. Joining Microsoft in 1992, he quickly became known as a leader who could span a breadth of technologies and businesses to transform some of Microsoft\’s biggest product offerings';
+const String kJulieSweetBio =
+    'Julie Sweet is chief executive officer of Accenture and serves on the company’s board of directors. Prior to becoming CEO in September 2019, Julie served as chief executive officer of Accenture’s business in North America, the company’s largest geographic market. Outside of Accenture, Julie is a leader on topics including innovation, technology’s impact on business, and inclusion and diversity.';
