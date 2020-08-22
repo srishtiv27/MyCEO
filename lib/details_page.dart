@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_ceo/menu_page.dart';
 import 'ceo.dart';
 import 'selected_photo.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -53,7 +54,6 @@ class _DetailsPageState extends State<DetailsPage>
                   });
                 },
                 child: Container(
-                  width: double.infinity,
                   height: screenHeight * 0.7,
                   child: Hero(
                     tag: 'Ceo ${widget.ceo.id}',
@@ -74,7 +74,7 @@ class _DetailsPageState extends State<DetailsPage>
                   height: screenHeight * 0.5,
                   child: GestureDetector(
                     onTap: () {
-                      Navigator.pop(context);
+                      Navigator.pushNamed(context, MenuPage.id);
                     },
                     child: Icon(
                       Icons.arrow_back_ios,
