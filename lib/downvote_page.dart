@@ -23,7 +23,7 @@ class _DownvotePageState extends State<DownvotePage> {
   bool _isLoggedIn = true;
   GoogleSignIn _googleSignIn = GoogleSignIn(scopes: ['email']);
 
-  _logout() {
+  void _logout() {
     _googleSignIn.signOut();
     setState(() {
       _isLoggedIn = false;
