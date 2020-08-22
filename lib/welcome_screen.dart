@@ -15,7 +15,6 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
     final screenHeight = MediaQuery.of(context).size.height;
     final screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
-//      backgroundColor: Color(0xFFf8f8ff),
       backgroundColor: Color(0xFFeaf0fa),
       body: Column(
         children: [
@@ -24,7 +23,6 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
           ),
           Container(
             height: screenHeight * 0.4,
-            width: screenWidth * 1.33333,
             child: Image.asset(
               'images/welcome-image.png',
               fit: BoxFit.cover,
