@@ -97,7 +97,6 @@ class _MenuPageState extends State<MenuPage> with TickerProviderStateMixin {
     'images/mary-barra.png',
     'images/satyanadella1.png',
   ];
-//  List<String> ceoNames = ['Elon Musk', 'Mary Barra', 'Satya Nadella'];
 
   bool _visibleUpvote = false;
   bool _visibleDownvote = false;
@@ -230,7 +229,6 @@ class _MenuPageState extends State<MenuPage> with TickerProviderStateMixin {
                   left: screenWidth * 0.10666,
                   child: Text(
                     isFinishedName(index2),
-//                    ceoInfo[index2].name,
                     style: TextStyle(
                       color: Color(0xE6FFFFFF),
                       fontSize: screenHeight * 0.0431,
@@ -382,7 +380,6 @@ class _MenuPageState extends State<MenuPage> with TickerProviderStateMixin {
               alignment: Alignment.bottomCenter,
               children: <Widget>[
                 Container(
-                  alignment: Alignment.bottomCenter,
                   height: screenHeight * 0.11083,
                   width: double.infinity,
                   decoration: BoxDecoration(
@@ -412,14 +409,9 @@ class _MenuPageState extends State<MenuPage> with TickerProviderStateMixin {
                           color: Colors.grey,
                         ),
                       ),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.pushNamed(context, MenuPage.id);
-                        },
-                        child: Icon(
-                          LineIcons.home,
-                          size: screenHeight * 0.04926,
-                        ),
+                      Icon(
+                        LineIcons.home,
+                        size: screenHeight * 0.04926,
                       ),
                       GestureDetector(
                         onTap: () {

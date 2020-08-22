@@ -23,7 +23,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   GoogleSignIn _googleSignIn = GoogleSignIn(scopes: ['email']);
 
-  _login() async {
+  void _login() async {
     try {
       setState(() {
         showSpinner = true;
@@ -54,7 +54,7 @@ class _LoginScreenState extends State<LoginScreen> {
     }
   }
 
-  _logout() {
+  void _logout() {
     _googleSignIn.signOut();
     setState(() {
       _isLoggedIn = false;

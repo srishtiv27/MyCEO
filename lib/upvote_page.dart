@@ -50,7 +50,6 @@ class _UpvotePageState extends State<UpvotePage> {
     final deviceWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: Color(0xFFf8f8ff),
-//      backgroundColor: Color(0xFFeaf0fa),
       body: Column(
         children: [
           Padding(

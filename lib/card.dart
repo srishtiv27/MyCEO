@@ -49,7 +49,6 @@ class CeoCard extends StatelessWidget {
                           style: TextStyle(
                             fontSize: screenHeight * 0.02586,
                             fontWeight: FontWeight.bold,
-//                                  color: Colors.grey[800],
                             color: Colors.white,
                           ),
                         ),
@@ -77,12 +76,8 @@ class CeoCard extends StatelessWidget {
           ),
           Stack(
             children: <Widget>[
-              Container(
+              SizedBox(
                 height: screenHeight * 0.23399,
-                width: deviceWidth * 0.4,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(screenHeight * 0.02463),
-                ),
               ),
               ClipRRect(
                 borderRadius: BorderRadius.circular(screenHeight * 0.02463),

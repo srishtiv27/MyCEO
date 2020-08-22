@@ -19,7 +19,7 @@ class MyCEO extends StatelessWidget {
       DeviceOrientation.portraitDown,
     ]);
     return MaterialApp(
-      initialRoute: WelcomeScreen.id,
+      initialRoute: MenuPage.id,
       routes: {
         WelcomeScreen.id: (context) => WelcomeScreen(),
         LoginScreen.id: (context) => LoginScreen(),
