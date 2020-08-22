@@ -6,8 +6,8 @@ import 'package:my_ceo/upvote_page.dart';
 import 'package:typicons_flutter/typicons_flutter.dart';
 import 'welcome_screen.dart';
 import 'card.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 class DownvotePage extends StatefulWidget {
   static String id = 'downvote-page';
@@ -19,6 +19,16 @@ class _DownvotePageState extends State<DownvotePage> {
   final _firestore = Firestore.instance;
   final _auth = FirebaseAuth.instance;
   FirebaseUser loggedInUser;
+
+  bool _isLoggedIn = true;
+  GoogleSignIn _googleSignIn = GoogleSignIn(scopes: ['email']);
+
+  _logout() {
+    _googleSignIn.signOut();
+    setState(() {
+      _isLoggedIn = false;
+    });
+  }
 
   void DownvotesStream() async {
     await for (var snapshot in _firestore.collection('downvotes').snapshots()) {
@@ -111,6 +121,7 @@ class _DownvotePageState extends State<DownvotePage> {
                       children: <Widget>[
                         GestureDetector(
                           onTap: () {
+                            _logout();
                             _auth.signOut();
                             Navigator.pushNamed(context, WelcomeScreen.id);
                           },

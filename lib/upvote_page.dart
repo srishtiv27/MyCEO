@@ -7,6 +7,7 @@ import 'package:my_ceo/welcome_screen.dart';
 import 'package:typicons_flutter/typicons_flutter.dart';
 import 'card.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 class UpvotePage extends StatefulWidget {
   static String id = 'upvote-page';
@@ -18,6 +19,16 @@ class _UpvotePageState extends State<UpvotePage> {
   final _firestore = Firestore.instance;
   final _auth = FirebaseAuth.instance;
   FirebaseUser loggedInUser;
+
+  bool _isLoggedIn = true;
+  GoogleSignIn _googleSignIn = GoogleSignIn(scopes: ['email']);
+
+  _logout() {
+    _googleSignIn.signOut();
+    setState(() {
+      _isLoggedIn = false;
+    });
+  }
 
   void UpvotesStream() async {
     await for (var snapshot in _firestore.collection('upvotes').snapshots()) {
@@ -113,6 +124,7 @@ class _UpvotePageState extends State<UpvotePage> {
                       children: <Widget>[
                         GestureDetector(
                           onTap: () {
+                            _logout();
                             _auth.signOut();
                             Navigator.pushNamed(context, WelcomeScreen.id);
                           },

@@ -11,6 +11,7 @@ import 'details_page.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 class MenuPage extends StatefulWidget {
   static String id = 'menu_page';
@@ -23,6 +24,15 @@ class _MenuPageState extends State<MenuPage> with TickerProviderStateMixin {
   final _firestore = Firestore.instance;
   final _auth = FirebaseAuth.instance;
   FirebaseUser loggedInUser;
+  bool _isLoggedIn = true;
+  GoogleSignIn _googleSignIn = GoogleSignIn(scopes: ['email']);
+
+  _logout() {
+    _googleSignIn.signOut();
+    setState(() {
+      _isLoggedIn = false;
+    });
+  }
 
   @override
   void initState() {
@@ -392,6 +402,7 @@ class _MenuPageState extends State<MenuPage> with TickerProviderStateMixin {
                     children: <Widget>[
                       GestureDetector(
                         onTap: () {
+                          _logout();
                           _auth.signOut();
                           Navigator.pushNamed(context, WelcomeScreen.id);
                         },
